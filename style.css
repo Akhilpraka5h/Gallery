@@ -1,0 +1,59 @@
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Styles for the gallery container */
+.gallery {
+  width: 900px;
+  display: flex;
+  overflow-x: scroll; /* Enable horizontal scrolling */
+}
+
+/* Styles for the inner gallery divs */
+.gallery div {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto; /* Three columns */
+  gap: 15px;
+  padding: 10px;
+  flex: none;
+}
+
+/* Styles for the gallery images */
+.gallery div img {
+  width: 100%;
+  filter: grayscale(100%); /* Apply grayscale filter */
+  transition: transform 0.5s; /* Smooth transition on hover */
+}
+
+/* Hide the scrollbar */
+.gallery::-webkit-scrollbar {
+  display: none;
+}
+
+/* Styles for the gallery wrapper */
+.gallery-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10% auto;
+}
+
+/* Styles for the back and next buttons */
+#backbtn,
+#nextbtn {
+  width: 50px;
+  cursor: pointer;
+  margin: 40px;
+}
+
+/* Styles for the gallery images on hover */
+.gallery div img:hover {
+  filter: grayscale(0); /* Remove grayscale filter */
+  cursor: pointer;
+  transform: scale(1.1); /* Enlarge the image */
+}
